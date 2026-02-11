@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SAKURA SUSHI - Премиальная доставка суши и роллов. Свежая рыба, авторские рецепты, быстрая доставка.">
+    <title>SAKURA SUSHI | Премиальная японская кухня</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png"> </head>
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-blaze-fill"></i> SAKURA <span>SUSHI</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Главная</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Меню</a></li>
+                    <li class="nav__item"><a href="#promo" class="nav__link">Акции</a></li>
+                    <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <div class="nav__cart" id="cart-btn">
+                    <i class="ri-shopping-bag-3-line"></i>
+                    <span class="cart__badge" id="cart-count">0</span>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-4-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart__header">
+            <h2 class="cart__title">Ваш заказ</h2>
+            <i class="ri-close-line cart__close" id="cart-close"></i>
+        </div>
+        <div class="cart__items" id="cart-items-container">
+            <div class="cart__empty-msg">Корзина пуста</div>
+        </div>
+        <div class="cart__footer">
+            <div class="cart__total">
+                <span>Итого:</span>
+                <span id="cart-total-price">0 ₽</span>
+            </div>
+            <button class="btn btn--primary btn--full" id="checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <main class="main">
+        <section class="hero" id="home">
+            <div class="hero__bg"></div>
+            <div class="hero__content container">
+                <span class="hero__subtitle animate-on-scroll">Истинные японские традиции</span>
+                <h1 class="hero__title animate-on-scroll">Премиальные суши <br> с доставкой за 30 минут</h1>
+                <p class="hero__desc animate-on-scroll">Почувствуйте вкус совершенства. Только охлажденная рыба, <br> премиальный рис и авторские соусы.</p>
+                <div class="hero__buttons animate-on-scroll">
+                    <a href="#menu" class="btn btn--primary">Смотреть меню</a>
+                    <a href="#promo" class="btn btn--outline">Акции</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features section">
+            <div class="container grid features__grid">
+                <div class="feature__card animate-on-scroll">
+                    <i class="ri-rocket-2-line feature__icon"></i>
+                    <h3>Быстрая доставка</h3>
+                    <p>Привезем заказ за 30-45 минут в любую точку города.</p>
+                </div>
+                <div class="feature__card animate-on-scroll">
+                    <i class="ri-drop-line feature__icon"></i>
+                    <h3>Свежайшая рыба</h3>
+                    <p>Поставки охлажденного лосося с Фарерских островов каждые 2 дня.</p>
+                </div>
+                <div class="feature__card animate-on-scroll">
+                    <i class="ri-restaurant-line feature__icon"></i>
+                    <h3>Шеф-повара</h3>
+                    <p>Команда с опытом работы в лучших ресторанах Токио.</p>
+                </div>
+                <div class="feature__card animate-on-scroll">
+                    <i class="ri-vip-crown-line feature__icon"></i>
+                    <h3>Премиум качество</h3>
+                    <p>Никаких заменителей. Только настоящий краб, угорь и икра.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu section" id="menu">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__subtitle">Наш ассортимент</span>
+                    <h2 class="section__title">Меню SAKURA</h2>
+                </div>
+                
+                <div class="menu__filters animate-on-scroll" id="menu-filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="premium">Премиум</button>
+                    <button class="filter-btn" data-filter="classic">Классика</button>
+                    <button class="filter-btn" data-filter="baked">Запеченные</button>
+                    <button class="filter-btn" data-filter="sets">Сеты</button>
+                    <button class="filter-btn" data-filter="nigiri">Нигири/Сашими</button>
+                </div>
+
+                <div class="menu__grid" id="menu-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section class="promo section" id="promo">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Специальные предложения</span>
+                    <h2 class="section__title">Акции недели</h2>
+                </div>
+                <div class="promo__grid">
+                    <div class="promo__card animate-on-scroll">
+                        <div class="promo__content">
+                            <h3>Скидка 20%</h3>
+                            <p>На первый заказ через приложение</p>
+                            <a href="#app-download" class="btn btn--sm">Скачать</a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd43fb?q=80&w=600&auto=format&fit=crop" alt="Promo">
+                    </div>
+                    <div class="promo__card animate-on-scroll">
+                        <div class="promo__content">
+                            <h3>Ролл в подарок</h3>
+                            <p>При заказе от 2500 ₽ — "Калифорния" бесплатно</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1617196034421-24e74918a0b8?q=80&w=600&auto=format&fit=crop" alt="Promo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews section" id="reviews">
+            <div class="container">
+                <h2 class="section__title center-text">Что говорят гости</h2>
+                <div class="reviews__grid">
+                    <div class="review__card animate-on-scroll">
+                        <div class="review__stars">★★★★★</div>
+                        <p>"Лучшие суши в городе. Рыба действительно свежая, слой толстый, рис идеальный. Доставили за 25 минут!"</p>
+                        <div class="review__author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                            <div>
+                                <h4>Анна К.</h4>
+                                <span>Постоянный клиент</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review__card animate-on-scroll">
+                        <div class="review__stars">★★★★★</div>
+                        <p>"Заказывали сет 'Император' на праздник. Упаковка премиальная, вкус божественный. Рекомендую!"</p>
+                        <div class="review__author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                            <div>
+                                <h4>Дмитрий В.</h4>
+                                <span>Гурман</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review__card animate-on-scroll">
+                        <div class="review__stars">★★★★☆</div>
+                        <p>"Очень вкусные запеченные роллы. Сервис на высоте, операторы вежливые. Цены оправданы качеством."</p>
+                        <div class="review__author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User">
+                            <div>
+                                <h4>Елена С.</h4>
+                                <span>Любитель суши</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container grid about__grid">
+                <div class="about__img animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?q=80&w=1000&auto=format&fit=crop" alt="Chef">
+                </div>
+                <div class="about__content animate-on-scroll">
+                    <span class="section__subtitle">Наша история</span>
+                    <h2 class="section__title">Философия SAKURA</h2>
+                    <p>Мы открылись в 2015 году с простой идеей: делать суши так, как их делают в Японии. Мы не экономим на ингредиентах, не используем заморозку и готовим каждый ролл из-под ножа.</p>
+                    <p>Наша миссия — принести культуру высокой японской кухни в каждый дом.</p>
+                    <div class="about__stats">
+                        <div>
+                            <h3>10+</h3>
+                            <span>Лет опыта</span>
+                        </div>
+                        <div>
+                            <h3>50k+</h3>
+                            <span>Довольных клиентов</span>
+                        </div>
+                        <div>
+                            <h3>40+</h3>
+                            <span>Видов роллов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-download section" id="app-download">
+            <div class="container app__container animate-on-scroll">
+                <div class="app__content">
+                    <span class="app__tag">BETA TEST</span>
+                    <h2 class="app__title">Скачайте приложение SAKURA</h2>
+                    <p class="app__desc">Станьте частью закрытого бета-тестирования нашего нового приложения. Получайте эксклюзивные бонусы, персональные скидки и заказывайте в один клик.</p>
+                    <div class="app__buttons">
+                        <a href="sushi-beta.exe" class="btn btn--gold download-trigger" download>
+                            <i class="ri-apple-fill"></i> Скачать Beta (iOS/Android)
+                        </a>
+                    </div>
+                    <p class="app__note">*Доступно только для участников программы лояльности</p>
+                </div>
+                <div class="app__image">
+                    <img src="https://images.unsplash.com/photo-1512428559087-560fa5ce7d25?q=80&w=600&auto=format&fit=crop" alt="App Phone">
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contacts">
+            <div class="container grid contact__grid">
+                <div class="contact__info animate-on-scroll">
+                    <h2 class="section__title">Контакты</h2>
+                    <ul class="contact__list">
+                        <li>
+                            <i class="ri-map-pin-line"></i>
+                            <span>Москва, Пресненская наб., 12 (Москва-Сити)</span>
+                        </li>
+                        <li>
+                            <i class="ri-phone-line"></i>
+                            <span>+7 (495) 999-00-00</span>
+                        </li>
+                        <li>
+                            <i class="ri-mail-line"></i>
+                            <span>hello@sakurasushi.ru</span>
+                        </li>
+                        <li>
+                            <i class="ri-time-line"></i>
+                            <span>Ежедневно с 10:00 до 23:00</span>
+                        </li>
+                    </ul>
+                    <div class="socials">
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-telegram-fill"></i></a>
+                    </div>
+                </div>
+                <form class="contact__form animate-on-scroll">
+                    <h3>Напишите нам</h3>
+                    <input type="text" placeholder="Ваше имя" class="form__input">
+                    <input type="tel" placeholder="Телефон" class="form__input">
+                    <textarea placeholder="Сообщение" class="form__input"></textarea>
+                    <button class="btn btn--primary">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <i class="ri-blaze-fill"></i> SAKURA SUSHI
+                </div>
+                <ul class="footer__links">
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оферта</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 SAKURA SUSHI. Все права защищены.</p>
+                <p>Политика конфиденциальности</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="order-modal">
+        <div class="modal__content">
+            <i class="ri-checkbox-circle-fill modal__icon"></i>
+            <h2>Спасибо за заказ!</h2>
+            <p>Ваш заказ #2026 принят в работу. Оператор свяжется с вами в течение 5 минут.</p>
+            <button class="btn btn--primary" id="close-modal">Отлично</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
